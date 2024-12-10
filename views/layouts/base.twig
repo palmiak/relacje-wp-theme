@@ -1,0 +1,26 @@
+{% block head %}
+<!doctype html>
+<html {{ function( 'language_attributes' ) }}>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	{{ function('wp_head') }}
+</head>
+{% endblock %}
+
+<body class="{{ body_class }}">
+	{% block header %}
+	{% endblock %}
+
+	{% block main %}
+	{% endblock %}
+
+	{% block footer %}
+	{{ function( 'wp_footer' ) }}
+	{% endblock %}
+</body>
+
+</html>
+

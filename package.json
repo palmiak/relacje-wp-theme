@@ -1,0 +1,40 @@
+{
+  "name": "sasquatwp",
+  "version": "1.2.5",
+  "description": "Foundation and Timber for WordPress",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "npx mix watch",
+    "build": "npx mix",
+    "development": "npx mix",
+    "production": "npx mix production"
+  },
+  "author": "Maciej Palmowski <m.palmowski@spiders.agency>",
+  "license": "MIT",
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "gulp-rename": "^1.4.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.2",
+    "laravel-mix": "^6.0.43",
+    "laravel-mix-purgecss": "^6.0.0",
+    "postcss": "^8.4.7",
+    "postcss-purgecss-laravel": "^2.0.0",
+    "purgecss-from-html": "^4.1.1",
+    "tailwindcss": "^3.0.23",
+    "yargs": "^17.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SasquatchWP/SasquatchWP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SasquatchWP/SasquatchWP/issues",
+    "email": "m.palmowski@freshpixels.pl"
+  },
+  "private": true
+}
