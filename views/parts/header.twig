@@ -1,0 +1,41 @@
+{% if is_dark %}
+    {% set logo = 'relacje-ai.svg' %}
+{% else %}
+    {% set logo = 'relacje-ai-dark.svg' %}
+{% endif %}
+
+{% if is_dark %}
+    {% set menuColor = 'text-white hover:text-relacje-color-accent' %}
+{% else %}
+    {% set menuColor = 'text-relacje-color-dark hover:text-relacje-color-accent' %}
+{% endif %}
+
+<header class="header header-relacje-{{ is_dark ? 'dark' : 'light' }} fixed w-full top-0 px-7 z-[100] transition-all delay-150 duration-200">
+    <div class="header-inner container mx-auto grid grid-cols-2 gap-4 content-center items-center">
+        <div class="col-start-1">
+            <a href="{{ site.url }}">
+                <img src="{{ theme.link }}/dist/images/{{ logo }}" alt="" class="h-[45] w-auto">
+            </a>
+        </div>
+        <div class="col-start-2 col-span-1 justify-self-end items-center flex flex-row gap-4 lg:gap-8">
+            <ul class="relacje-menu hidden lg:flex flex-row flex-nowrap gap-4 lg:gap-8 content-center items-center">
+                <li>
+                    <a class="{{ menuColor }} font-bold transition-all delay-150 duration-200 tracking-[2px]" href="{{ item.link }}" target="{{ item.target }}">O nas</a>
+                </li>
+                <li>
+                    <a class="{{ menuColor }} font-bold transition-all delay-150 duration-200 tracking-[2px]" href="{{ item.link }}"
+                        target="{{ item.target }}">Realizacje</a>
+                </li>
+                <li>
+                    <a class="{{ menuColor }} font-bold transition-all delay-150 duration-200 tracking-[2px]" href="{{ item.link }}" target="{{ item.target }}">Cennik</a>
+                </li>
+            </ul>
+            <label id="open-navigation" class="burger flex flex-col w-[40px] cursor-pointer" for="check">
+                <input type="checkbox" id="check" class="hidden" />
+                <span class="rounded-lg h-[3px] my-[4px]"></span>
+                <span class="rounded-lg h-[3px] my-[4px]"></span>
+                <span class="rounded-lg h-[3px] my-[4px]"></span>
+            </label>
+        </div>
+    </div>
+</header>

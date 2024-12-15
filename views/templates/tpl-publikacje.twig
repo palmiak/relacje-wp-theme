@@ -1,0 +1,68 @@
+{% extends "/layouts/base.twig" %}
+
+{% block main %}
+    <div class="main-content pt-28">
+
+        {% include 'views/parts/blocks/articles/featured-article.twig' %}
+
+        {% include 'views/parts/blocks/articles/big-article.twig' %}
+
+        <div class="delayed-scroll px-8 relative mb-14 lg:mb-36">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-14">
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+                <div class="grid grid-cols-1 gap-14">
+                    {% include 'views/parts/blocks/articles/small-article.twig' %}
+                    {% include 'views/parts/blocks/articles/small-article.twig' %}
+                    {% include 'views/parts/blocks/articles/small-article.twig' %}
+                </div>
+            </div>
+        </div>
+
+        {% include 'views/parts/blocks/boxes/brands.twig' %}
+
+        {% include 'views/parts/blocks/articles/big-article-inverse.twig' %}
+
+        <div class="delayed-scroll px-8 relative mb-14 lg:mb-36">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-14">
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+                <div>
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                </div>
+            </div>
+        </div>
+
+        <div>
+            {% include 'views/parts/blocks/articles/pagination.twig' %}
+        </div>
+    </div>
+{% endblock %}

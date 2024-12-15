@@ -6,6 +6,17 @@ let purgeFromHTML = require('purgecss-from-html');
 
 let path = require('path');
 mix.setPublicPath('./dist');
+mix.browserSync({
+	watch: true,
+	files: [
+		'**/*/*.+(twig|php|css|js)'
+	],
+	open: 'external',
+    host: 'relacje.test',
+	proxy: {
+		target: 'http://relacje.test',
+	}
+});
 
 mix
 .js('./assets/js/app.js', './dist/js/app.js')

@@ -37,9 +37,9 @@ add_action( 'after_setup_theme', 'setup' );
 
 function assets() {
 	wp_enqueue_style( 'sasquatch/css', asset_path( 'css/app.css' ) );
-	wp_enqueue_script( 'sasquatch/js', asset_path( 'js/app.js' ), '', null, true );
-	wp_deregister_style( 'wp-block-library' );
-	wp_dequeue_style( 'global-styles' );
+	wp_enqueue_script( 'sasquatch/js', asset_path( 'js/app.js' ), array('jquery'), null, true );
+	//wp_deregister_style( 'wp-block-library' );
+	//wp_dequeue_style( 'global-styles' );
 }
 add_action( 'wp_enqueue_scripts', 'assets', 100 );
 

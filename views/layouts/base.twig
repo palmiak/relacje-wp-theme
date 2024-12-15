@@ -1,26 +1,37 @@
 {% block head %}
 <!doctype html>
-<html {{ function( 'language_attributes' ) }}>
+<html {{ function( 'language_attributes' ) }} class="scroll-smooth">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+	<style>
+		:root {
+			--relacje-color-accent: #00AEEF;
+		}
+	</style>
 	{{ function('wp_head') }}
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 </head>
 {% endblock %}
 
-<body class="{{ body_class }}">
+<body class="{{ body_class }} font-relacje-font-text bg-white text-lg">
 	{% block header %}
+		{% include 'views/parts/header.twig' %}
+		{% include 'views/parts/overlay-menu.twig' %}
 	{% endblock %}
 
 	{% block main %}
 	{% endblock %}
 
 	{% block footer %}
-	{{ function( 'wp_footer' ) }}
+		{% include 'views/parts/footer.twig' %}
+		{{ function( 'wp_footer' ) }}
 	{% endblock %}
 </body>
 
 </html>
-

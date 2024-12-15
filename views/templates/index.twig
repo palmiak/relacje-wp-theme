@@ -1,5 +1,28 @@
 {% extends "/layouts/base.twig" %}
 
+{% block header %}
+    {% include 'views/parts/header.twig' with { 'is_dark': true } %}
+    {% include 'views/parts/overlay-menu.twig' %}
+{% endblock %}
+
 {% block main %}
-hello
+
+{% include 'views/parts/blocks/heros/hero-home.twig' %}
+
+<section id="relacje-home-first"></section>
+
+{% include 'views/parts/blocks/text/photo-text.twig' %}
+
+{% include 'views/parts/blocks/sliders/portfolio.twig' %}
+
+{% include 'views/parts/blocks/boxes/offer-boxes.twig' %}
+
+{% include 'views/parts/blocks/boxes/pricing-short.twig' %}
+
+{% include 'views/parts/blocks/text/photo-text-inverse.twig' %}
+
+{% include 'views/parts/blocks/sliders/reviews.twig' %}
+
+{% include 'views/parts/blocks/boxes/brands.twig' %}
+
 {% endblock %}

@@ -1,0 +1,89 @@
+{% extends "/layouts/base.twig" %}
+
+{% block main %}
+<div class="main-content pt-28">
+
+    {% include 'views/parts/blocks/articles/single/hero-article.twig' %}
+
+    <div class="
+            post-content
+            max-w-3xl
+            mx-auto
+            px-8
+            prose leading-normal
+            prose-lg 
+            prose-p:text-relacje-color-dark/70 
+            prose-heading:text-relacje-color-dark/70 
+            prose-strong:text-relacje-color-dark/70
+            prose-headings:font-bold
+            prose-headings:font-relacje-font-text
+            prose-a:transition-all prose-a:delay-150 prose-a:duration-200
+            prose-a:text-relacje-color-accent hover:prose-a:text-relacje-color-dark
+            mb-14
+        ">
+        {{ post.content }}
+    </div>
+
+    <div
+        class="container px-8 max-w-3xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center mb-4 pb-6 border-b border-relacje-color-dark/10">
+        <p class="text-base font-bold text-relacje-color-dark mb-4 lg:mb-0">
+            Podoba Ci się ten artykuł? Udostępnij go:
+        </p>
+        <ul class="flex flex-row items-center gap-4 lg:justify-end">
+            <li>
+                <a href="">{% include 'views/parts/icons/linkedin.twig' with { 'fillPath': 'fill-relacje-color-dark',
+                    'HeightPath': 'h-[16px]', 'WidthPath': 'w-auto' } %}</a>
+            </li>
+            <li>
+                <a href="">{% include 'views/parts/icons/x.twig' with { 'fillPath': 'fill-relacje-color-dark',
+                    'HeightPath': 'h-[16px]', 'WidthPath': 'w-auto' } %}</a>
+            </li>
+            <li>
+                <a href="">{% include 'views/parts/icons/facebook.twig' with { 'fillPath': 'fill-relacje-color-dark',
+                    'HeightPath': 'h-[16px]', 'WidthPath': 'w-auto' } %}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container px-8 max-w-3xl mx-auto flex flex-row gap-4 mt-6 mb-14 lg:mb-36">
+        <a href="" class="inline-block py-3 px-4 
+                       text-relacje-color-dark hover:text-white 
+                       text-base leading-none capitalize rounded-md 
+                       appearance-none focus:outline-none focus:shadow-outline 
+                       bg-relacje-color-dark/5 hover:bg-relacje-color-dark transition-all delay-150 duration-200">
+            video
+        </a>
+        <a href="" class="inline-block py-3 px-4 
+                        text-relacje-color-dark hover:text-white 
+                        text-base leading-none capitalize rounded-md 
+                        appearance-none focus:outline-none focus:shadow-outline 
+                        bg-relacje-color-dark/5 hover:bg-relacje-color-dark transition-all delay-150 duration-200">
+            nagrania
+        </a>
+        <a href="" class="inline-block py-3 px-4 
+                        text-relacje-color-dark hover:text-white 
+                        text-base leading-none capitalize rounded-md 
+                        appearance-none focus:outline-none focus:shadow-outline 
+                        bg-relacje-color-dark/5 hover:bg-relacje-color-dark transition-all delay-150 duration-200">
+            social media
+        </a>
+    </div>
+
+    {% include 'views/parts/blocks/articles/big-article.twig' %}
+
+    <div class="delayed-scroll px-8 relative mb-14 lg:mb-36">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-14">
+            <div>
+                {% include 'views/parts/blocks/articles/normal-article.twig' %}
+            </div>
+            <div>
+                {% include 'views/parts/blocks/articles/normal-article.twig' %}
+            </div>
+            <div class="grid grid-cols-1 gap-14">
+                {% include 'views/parts/blocks/articles/small-article.twig' %}
+                {% include 'views/parts/blocks/articles/small-article.twig' %}
+                {% include 'views/parts/blocks/articles/small-article.twig' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

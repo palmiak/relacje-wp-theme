@@ -1,0 +1,125 @@
+{% include 'views/parts/blocks/heros/hero-footer.twig' %}
+
+<footer id="footer" class="container delayed-scroll mx-auto grid grid-cols-1 lg:grid-cols-[25%_auto] gap-8 items-end relative lg:-mt-24 z-20 mb-0 lg:mb-24">
+    <div class="p-8 lg:p-0 grid gap-8 grid-cols-1 order-2 lg:order-1">
+        <p>
+            <a href="{{ site.url }}">
+                <img src="{{ theme.link }}/dist/images/relacje-ai-dark.svg" alt="">
+            </a>
+        </p>
+        <p class="text-sm text-relacje-color-dark/60">Amet enim vitae eu adipiscing vel integer purus consequat. Suspendisse quam ultricies pharetra in gravida scelerisque quis diam.</p>
+
+        <p class="text-sm">
+            <span class="text-relacje-color-dark/40">©2024</span> <a href="{{ site.url }}" class="text-relacje-color-dark/60 transition-all delay-150 duration-200 hover:text-relacje-color-dark/80">Relacje.ai</a><br>
+            <span class="text-relacje-color-dark/40">Made  by</span> <a href="https://freshpixels.pl/" target="_blank" class="text-relacje-color-dark/60 transition-all delay-150 duration-200 hover:text-relacje-color-dark/80">FreshPixels</a><br>
+        </p>
+    </div>
+    <div class="bg-relacje-color-dark p-8 lg:px-24 lg:py-24 text-white grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 order-1 lg:order-2">
+        <div class="text-base text-white lg:tracking-[2px]">
+            <p class="mb-8"><strong>Relacje.ai</strong></p>
+
+            <ul class="list-none">
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        O nas
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        Realizacje
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        Cennik
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        Publikacje
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-base text-white lg:tracking-[2px]">
+            <p class="mb-8"><strong>Wybrane realizacje</strong></p>
+
+            <ul class="list-none">
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        WordCamp Gdynia 2024
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        Festiwal Gier i Komiksu
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        Soudedit 2024
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        MedialCorpo
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" class="transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        Another name 2024
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-base text-white lg:tracking-[2px]">
+            <p class="mb-8"><strong>Bądź na bieżąco</strong></p>
+
+            <ul class="list-none">
+                <li class="py-2">
+                    <a href="" target="_blank" class="flex flex-row gap-4 items-center transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        <span>{% include 'views/parts/icons/youtube.twig' with { 'fillPath': 'fill-white', 'HeightPath': 'h-auto', 'WidthPath': 'w-[19px]' } %}</span>
+                        Youtube
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a href="" target="_blank" class="flex flex-row gap-4 items-center transition-all delay-150 duration-200 text-white hover:text-relacje-color-accent inline-block hover:translate-x-1">
+                        <span>{% include 'views/parts/icons/linkedin.twig' with { 'fillPath': 'fill-white', 'HeightPath': 'h-auto', 'WidthPath': 'w-[19px]' } %}</span>
+                        Linkedin
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<section class="container p-8 lg:p-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center content-center relative mb-20 lg:mb-24">
+    <div>
+        <ul class="flex flex-col lg:flex-row flex-nowrap gap-4 lg:gap-8 content-center">
+            <li class="text-sm text-relacje-color-dark/60">
+                Poznaj nasze marki:
+            </li>
+            <li>
+                <a href="" target="_blank" class="inline-block hover:pb-1 transition-all duration-200"><img src="{{ theme.link }}/dist/images/relacje_tv.svg" alt="" class="w-auto h-[13px]"></a>
+            </li>
+            <li>
+                <a href="" target="_blank" class="inline-block hover:pb-1 transition-all duration-200"><img src="{{ theme.link }}/dist/images/relacje_video.svg" alt="" class="w-auto h-[13px]"></a>
+            </li>
+            <li>
+                <a href="" target="_blank" class="inline-block hover:pb-1 transition-all duration-200"><img src="{{ theme.link }}/dist/images/relacje_live.svg" alt="" class="w-auto h-[13px]"></a>
+            </li>
+            <li>
+                <a href="" target="_blank" class="inline-block hover:pb-1 transition-all duration-200"><img src="{{ theme.link }}/dist/images/relacje_courses.svg" alt="" class="w-auto h-[13px]"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <img src="{{ theme.link }}/dist/images/KPO.svg" alt="">
+    </div>
+</section>
