@@ -39,7 +39,10 @@ module.exports = {
 			},
 			boxShadow: {
 				'relacje-shadow': '8px 40px 67.9px 0px rgba(1, 7, 9, 0.29)',
-			}
+			},
+			listStyleImage: {
+				checkmark: 'url("/wp-content/themes/relacje-wp-theme/dist/images/checkmark.svg")',
+			},
 		},
 	},
 	plugins: [

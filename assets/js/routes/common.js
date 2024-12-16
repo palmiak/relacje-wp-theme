@@ -2,7 +2,7 @@ export default {
 	init() {
 
 		// Zmiana tła dla header dark przy scrollu
-		const targetElement = document.querySelector('.header-relacje-dark');
+		const targetElement = document.querySelector('.header');
 		function toggleClassOnScroll() {
 			const scrollPosition = window.scrollY;
 			const threshold = 20;
@@ -79,17 +79,17 @@ export default {
 		open_nav.addEventListener( 'click', (event) => {
 			event.preventDefault();
 			check.setAttribute("checked", "checked");
-			document.body.classList.add( 'overflow-hidden' );
-			nav.classList.add( 'top-0' );
-			nav.classList.remove( '-top-full' );
+			document.body?.classList.add( 'overflow-hidden' );
+			nav?.classList.add( 'top-0' );
+			nav?.classList.remove( '-top-full' );
 		} );
 
 		close_nav.addEventListener( 'click', (event) => {
 			event.preventDefault();
 			check.removeAttribute("checked", "checked");
-			document.body.classList.remove( 'overflow-hidden' );
-			nav.classList.remove( 'top-0' );
-			nav.classList.add( '-top-full' );
+			document.body?.classList.remove( 'overflow-hidden' );
+			nav?.classList.remove( 'top-0' );
+			nav?.classList.add( '-top-full' );
 		} );
 	}
 }

@@ -233,6 +233,34 @@ svg, path, circle, line {
     @apply aspect-w-16 aspect-h-9 relative xl:h-[600px];
 } */
 
+.wp-block-embed-youtube .wp-block-embed__wrapper {
+    @apply aspect-w-16 aspect-h-9 relative;
+}
+
+.wp-block-embed-youtube {
+    @apply xl:h-[600px] relative;
+}
+
 .wp-block-embed-youtube .wp-block-embed__wrapper iframe {
     @apply xl:min-w-[1100px] xl:h-[600px] xl:absolute xl:top-0 xl:left-1/2 xl:-ml-[550px];
+}
+
+.wp-block-video {
+    @apply xl:h-[600px] relative;
+}
+
+.wp-block-video video {
+    @apply xl:min-w-[1100px] xl:h-[600px] xl:absolute xl:top-0 xl:left-1/2 xl:-ml-[550px];
+}
+
+.wp-block-quote {
+    @apply border-l-2 border-relacje-color-dark/10 pl-14;
+}
+
+.wp-block-quote p {
+    @apply text-[20px] lg:text-h3lg md:text-h3md sm:text-h3sm font-bold text-relacje-color-dark;
+}
+
+.wp-block-quote cite {
+    @apply text-relacje-color-dark/40;
 }
