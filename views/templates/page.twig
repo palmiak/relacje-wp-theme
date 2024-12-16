@@ -1,0 +1,49 @@
+{% extends "/layouts/base.twig" %}
+
+{% block main %}
+<article class="main-content pt-28 relative px-8 mb-14 lg:mb-36">
+    <div class="delayed-scroll max-w-3xl mx-auto px-8">
+        <h1 class="text-[24px] md:text-[40px] lg:[60px] font-relacje-font-heading leading-snug mb-8 lg:mb-12">{{ post.title }}</h1>
+    </div>  
+
+    {% if post.thumbnail %}
+    {% set image = Image( post.thumbnail ) %}
+    <div class="delayed-scroll container mx-auto px-8 mb-8 lg:mb-12">
+        <picture>
+            <source
+                srcset="{{ image|resize(640,480)|towebp(90) }}"
+                media="(max-width: 640px)">
+            <source
+                srcset="{{ image|resize(1024,600)|towebp(90) }}"
+                media="(min-width: 641px) and (max-width: 1024px)">
+            <img
+                srcset="{{ image|resize(1400,580)|towebp(90) }}"
+                alt="{{ image.alt }}" class="box-shadow">
+        </picture>
+    </div>
+    {% endif %}
+
+    <div class="
+                post-content
+                max-w-3xl
+                mx-auto
+                px-8
+                prose leading-normal
+                prose-lg 
+                prose-p:text-relacje-color-dark/70 
+                prose-heading:text-relacje-color-dark/70 
+                prose-strong:text-relacje-color-dark/70
+                prose-headings:font-bold
+                prose-headings:font-relacje-font-text
+                prose-a:transition-all prose-a:delay-150 prose-a:duration-200
+                prose-a:text-relacje-color-accent hover:prose-a:text-relacje-color-dark
+                prose-ul:list-image-checkmark
+                prose-li:ps-[20px]
+    ">
+        {{ post.content }}
+    </div>
+</article>
+
+{% include 'views/parts/blocks/boxes/brands.twig' %}
+
+{% endblock %}
