@@ -1,0 +1,17 @@
+{% for post in other_posts|slice(0,1) %}
+    {% include 'views/parts/blocks/articles/big-article.twig' %}
+{% endfor %}
+
+<div class="delayed-scroll px-8 relative mb-14 lg:mb-36">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-14">
+        {% for post in other_posts|slice(1,2) %}
+            {% include 'views/parts/blocks/articles/normal-article.twig' %}
+        {% endfor %}
+
+        <div class="grid grid-cols-1 gap-14">
+            {% for post in other_posts|slice(3,3) %}
+                {% include 'views/parts/blocks/articles/small-article.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

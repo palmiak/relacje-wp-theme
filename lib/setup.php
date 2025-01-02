@@ -19,10 +19,9 @@ function setup() {
 	add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'search-form' ) );
 	register_nav_menus(
 		array(
-			'header-left'   => 'Menu główne - Lewo',
-			'header-right'  => 'Menu główne - Prawo',
+			'header'   => 'Menu Header',
+			'overlay'  => 'Menu Overlay',
 			'footer'   => 'Footer',
-			'menu-desktop'   => 'Menu główne - desktop',
 		)
 	);
 

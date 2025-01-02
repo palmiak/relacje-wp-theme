@@ -1,26 +1,24 @@
 <article class="relative delayed-scroll px-8 mb-14 lg:mb-36">
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center">
-        <div class="order-2">
+        <div class="order-2 {{ inverted ? 'lg:order-1' : '' }}">
             <h2 class="text-[24px] md:text-[40px] lg:[60px] font-relacje-font-heading leading-snug mb-8 lg:mb-12">
-                <a href=""
+                <a href="{{ post.link }}"
                     class="transition-all delay-150 duration-200 text-relacje-color-dark hover:text-relacje-color-accent">
-                    Odio amet lectus pharetra nibh
+                    {{ post.title }}
                 </a>
             </h2>
             <div
                 class="prose max-w-[450px] leading-normal prose-lg prose-p:text-relacje-color-dark/70 prose-heading:text-relacje-color-dark/70 prose-strong:text-relacje-color-dark/70 prose-ul:list-image-checkmark prose-li:ps-[20px] mb-8 lg:mb-12">
-                <p>
-                    Facilisis faucibus egestas odio facilisis in tellus lacus metus. Fusce tortor ipsum ac consectetur pellentesque senectus in mi.
-                </p>
+                {{ post.preview.length(25).read_more('') }}
             </div>
-            <a href="" class="inline-block overflow-hidden pb-[6px] relative hover:text-relacje-color-accent font-bold text-relacje-color-dark transition-all delay-150 duration-200 before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-relacje-color-dark before:z-[2] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:transition-all after:delay-150 after:duration-200 after:h-[2px] after:bg-relacje-color-accent after:z-[4]">
+            <a href="{{ post.link }}" class="inline-block overflow-hidden pb-[6px] relative hover:text-relacje-color-accent font-bold text-relacje-color-dark transition-all delay-150 duration-200 before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-relacje-color-dark before:z-[2] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:transition-all after:delay-150 after:duration-200 after:h-[2px] after:bg-relacje-color-accent after:z-[4]">
                 Czytaj dalej
             </a>
         </div>
 
-        <div class="order-1">
-            <a href="">
-                <img src="{{ theme.link }}/dist/images/hero-home-image.jpg" alt=""
+        <div class="order-1 {{ inverted ? 'lg:order-2' : '' }}">
+            <a href="{{ post.link}}">
+                <img src="{{ Image( post.thumbnail ) | towebp }}" alt=""
                     class="object-cover h-[250px] lg:h-[450px] w-full">
             </a>
         </div>

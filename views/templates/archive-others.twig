@@ -1,0 +1,20 @@
+{% extends "/layouts/base.twig" %}
+
+{% block main %}
+    <div class="main-content pt-28">
+        <div class="max-w-3xl mx-auto px-8">
+            <h1 class="text-[24px] md:text-[40px] lg:[60px] font-relacje-font-heading leading-snug mb-8 lg:mb-12">Test</h1>
+        </div>  
+        <div class="px-8 relative mb-14 lg:mb-36">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-14">
+                {% for post in posts %}
+                    {% include 'views/parts/blocks/articles/normal-article.twig' %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div>
+            {% include 'views/parts/blocks/articles/pagination.twig' %}
+        </div>
+    </div>
+{% endblock %}

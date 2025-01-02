@@ -1,17 +1,15 @@
 <article class="relative">
     <h2 class="text-[22px] font-relacje-font-text leading-snug mb-3">
-        <a href=""
+        <a href="{{ post.link }}"
             class="transition-all delay-150 duration-200 font-bold text-relacje-color-dark hover:text-relacje-color-accent">
-            Elementum adipiscing vitae mi vitae mauris duis.
+            {{ post.title }}
         </a>
     </h2>
     <div
         class="prose max-w-[450px] leading-normal prose-lg prose-p:text-relacje-color-dark/70 prose-heading:text-relacje-color-dark/70 prose-strong:text-relacje-color-dark/70 prose-ul:list-image-checkmark prose-li:ps-[20px] mb-3">
-        <p>
-            Dignissim dignissim est mi arcu vulputate. Urna imperdiet scelerisque arcu scelerisque maecenas imperdiet ut ornare.
-        </p>
+        {{ post.preview.length(25).read_more('') }}
     </div>
-    <a href=""
+    <a href="{{ post.link }}"
         class="inline-block overflow-hidden pb-[6px] relative hover:text-relacje-color-accent font-bold text-relacje-color-dark transition-all delay-150 duration-200 before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-relacje-color-dark before:z-[2] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:transition-all after:delay-150 after:duration-200 after:h-[2px] after:bg-relacje-color-accent after:z-[4]">
         Czytaj dalej
     </a>

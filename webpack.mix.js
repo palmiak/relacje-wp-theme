@@ -3,6 +3,7 @@
 let mix = require('laravel-mix');
 let args = require('yargs');
 let purgeFromHTML = require('purgecss-from-html');
+require( 'laravel-mix-replace-in-file' );
 
 let path = require('path');
 mix.setPublicPath('./dist');

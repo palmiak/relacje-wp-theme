@@ -5,6 +5,7 @@ $timber = new \Timber\Timber();
 $sage_includes = array(
 	'lib/timber.php',
 	'lib/setup.php',
+	'lib/shortcodes.php',
 	'lib/gutenberg.php',
 	'lib/filters.php',
 	'lib/query.php',

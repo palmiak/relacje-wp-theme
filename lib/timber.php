@@ -24,10 +24,9 @@ function add_to_context( $data ) {
 
 	$data['options'] = get_fields( 'options' );
 
-	$data['menu']['header_left']   = new Timber\Menu( 'header-lewo' );
-	$data['menu']['header_right']   = new Timber\Menu( 'header-prawo' );
+	$data['menu']['header']   = new Timber\Menu( 'header' );
+	$data['menu']['overlay']   = new Timber\Menu( 'overlay' );
 	$data['menu']['footer']   = new Timber\Menu( 'footer' );
-	$data['menu']['header_desktop']   = new Timber\Menu( 'menu-desktop' );
 
 	$data['browser'] = $_SERVER['HTTP_USER_AGENT'];
 	$data['get_data'] = $_GET;

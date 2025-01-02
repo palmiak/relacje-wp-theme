@@ -33,59 +33,34 @@
         </p>
         <ul class="flex flex-row items-center gap-4 lg:justify-end">
             <li>
-                <a href="">{% include 'views/parts/icons/linkedin.twig' with { 'fillPath': 'fill-relacje-color-dark',
+                <a href="{{ post.link | li_share }}" target="about:blank">{% include 'views/parts/icons/linkedin.twig' with { 'fillPath': 'fill-relacje-color-dark',
                     'HeightPath': 'h-[16px]', 'WidthPath': 'w-auto' } %}</a>
             </li>
             <li>
-                <a href="">{% include 'views/parts/icons/x.twig' with { 'fillPath': 'fill-relacje-color-dark',
+                <a href="{{ post.link | x_share }}" target="about:blank">{% include 'views/parts/icons/x.twig' with { 'fillPath': 'fill-relacje-color-dark',
                     'HeightPath': 'h-[16px]', 'WidthPath': 'w-auto' } %}</a>
             </li>
             <li>
-                <a href="">{% include 'views/parts/icons/facebook.twig' with { 'fillPath': 'fill-relacje-color-dark',
+                <a href="{{ post.link | fb_share }}" target="about:blank">{% include 'views/parts/icons/facebook.twig' with { 'fillPath': 'fill-relacje-color-dark',
                     'HeightPath': 'h-[16px]', 'WidthPath': 'w-auto' } %}</a>
             </li>
         </ul>
     </div>
+    {% if post.tags %}
     <div class="container px-8 max-w-3xl mx-auto flex flex-row gap-4 mt-6 mb-14 lg:mb-36">
-        <a href="" class="inline-block py-3 px-4 
+        {% for tag in post.tags %}
+        <a href="{{ tag.link }}" class="inline-block py-3 px-4 
                        text-relacje-color-dark hover:text-white 
                        text-base leading-none capitalize rounded-md 
                        appearance-none focus:outline-none focus:shadow-outline 
                        bg-relacje-color-dark/5 hover:bg-relacje-color-dark transition-all delay-150 duration-200">
-            video
+            {{ tag.name }}
         </a>
-        <a href="" class="inline-block py-3 px-4 
-                        text-relacje-color-dark hover:text-white 
-                        text-base leading-none capitalize rounded-md 
-                        appearance-none focus:outline-none focus:shadow-outline 
-                        bg-relacje-color-dark/5 hover:bg-relacje-color-dark transition-all delay-150 duration-200">
-            nagrania
-        </a>
-        <a href="" class="inline-block py-3 px-4 
-                        text-relacje-color-dark hover:text-white 
-                        text-base leading-none capitalize rounded-md 
-                        appearance-none focus:outline-none focus:shadow-outline 
-                        bg-relacje-color-dark/5 hover:bg-relacje-color-dark transition-all delay-150 duration-200">
-            social media
-        </a>
+        {% endfor %}
     </div>
+    {% endif %}
 
-    {% include 'views/parts/blocks/articles/big-article.twig' %}
-
-    <div class="delayed-scroll px-8 relative mb-14 lg:mb-36">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-14">
-            <div>
-                {% include 'views/parts/blocks/articles/normal-article.twig' %}
-            </div>
-            <div>
-                {% include 'views/parts/blocks/articles/normal-article.twig' %}
-            </div>
-            <div class="grid grid-cols-1 gap-14">
-                {% include 'views/parts/blocks/articles/small-article.twig' %}
-                {% include 'views/parts/blocks/articles/small-article.twig' %}
-                {% include 'views/parts/blocks/articles/small-article.twig' %}
-            </div>
-        </div>
-    </div>
+    {% include 'views/parts/other_posts.twig' %}
+    
 </div>
 {% endblock %}

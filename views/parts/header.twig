@@ -1,7 +1,7 @@
 {% if is_dark %}
-    {% set logo = 'relacje-ai.svg' %}
+    {% set logo = Image(options.logo-dark) %}
 {% else %}
-    {% set logo = 'relacje-ai-dark.svg' %}
+    {% set logo = Image(options.logo) %}
 {% endif %}
 
 {% if is_dark %}
@@ -14,21 +14,16 @@
     <div class="header-inner container mx-auto grid grid-cols-2 gap-4 content-center items-center">
         <div class="col-start-1">
             <a href="{{ site.url }}">
-                <img src="{{ theme.link }}/dist/images/{{ logo }}" alt="" class="h-[45] w-auto">
+                <img src="{{ logo }}" alt="" class="h-[45] w-auto">
             </a>
         </div>
         <div class="col-start-2 col-span-1 justify-self-end items-center flex flex-row gap-4 lg:gap-8">
             <ul class="relacje-menu hidden lg:flex flex-row flex-nowrap gap-4 lg:gap-8 content-center items-center">
-                <li>
-                    <a class="{{ menuColor }} font-bold transition-all delay-150 duration-200 tracking-[2px]" href="{{ item.link }}" target="{{ item.target }}">O nas</a>
-                </li>
-                <li>
-                    <a class="{{ menuColor }} font-bold transition-all delay-150 duration-200 tracking-[2px]" href="{{ item.link }}"
-                        target="{{ item.target }}">Realizacje</a>
-                </li>
-                <li>
-                    <a class="{{ menuColor }} font-bold transition-all delay-150 duration-200 tracking-[2px]" href="{{ item.link }}" target="{{ item.target }}">Cennik</a>
-                </li>
+                {% for item in menu.header.items %}
+                    <li>
+                        <a class="{{ menuColor }} font-bold transition-all delay-150 duration-200 tracking-[2px]" href="{{ item.link }}" target="{{ item.target }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
             </ul>
             <label id="open-navigation" class="burger flex flex-col w-[40px] cursor-pointer" for="check">
                 <input type="checkbox" id="check" class="hidden" />
